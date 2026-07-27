@@ -1,5 +1,5 @@
 import logo from "../assets/logo-main.png";
-import jasonAndAlex from "../assets/Jason-and-Alex_Subcon-Sales.png";
+import jasonAndAlex from "../assets/jason-and-alex_subcon-sales.png";
 
 export default function WhyEffective() {
   // Smooth scroll handler for the Read More button
