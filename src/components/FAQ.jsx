@@ -7,11 +7,20 @@ export default function FAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Simplified click handler for single-page smooth scrolling
+  // Simplified click handler for single-page smooth scrolling to Contact
   const handleContactClick = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Simplified click handler for single-page smooth scrolling to Services
+  const handleServicesClick = (e) => {
+    e.preventDefault();
+    const servicesSection = document.getElementById("services");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -24,8 +33,30 @@ export default function FAQ() {
     {
       question:
         "What is the difference between the Owner Club and Certification Access?",
-      answer:
-        "The Owner Club ($250/month) is designed specifically for Owners and General Managers. It focuses on high-level business philosophy, menu structure, pricing strategy, and leadership accountability. The Certification Access ($19/month) is built for your staff—it provides your employees with direct access to our step-by-step sales training modules, scripts, and the final certification exam.",
+      answer: (
+        <>
+          <a
+            href="#services"
+            onClick={handleServicesClick}
+            className="text-accent-blue underline hover:opacity-80 transition cursor-pointer"
+          >
+            The Owner Club
+          </a>{" "}
+          ($250/month) is designed specifically for Owners and General Managers.
+          It focuses on high-level business philosophy, menu structure, pricing
+          strategy, and leadership accountability.{" "}
+          <a
+            href="#services"
+            onClick={handleServicesClick}
+            className="text-accent-blue underline hover:opacity-80 transition cursor-pointer"
+          >
+            The Certification Access
+          </a>{" "}
+          ($19/month) is built for your staff—it provides your employees with
+          direct access to our step-by-step sales training modules, scripts, and
+          the final certification exam.
+        </>
+      ),
     },
     {
       question: "How long does it take for employees to complete the training?",
@@ -34,13 +65,46 @@ export default function FAQ() {
     },
     {
       question: "Do you offer 1-on-1 help for my specific car wash?",
-      answer:
-        "Yes! We offer IBA & Tunnel Consulting. You can book a direct 1-on-1 strategy call with Jason Hayes to evaluate your specific situation.",
+      answer: (
+        <>
+          Yes! We offer IBA & Tunnel Consulting. You can{" "}
+          <a
+            href="https://calendly.com/carwashjason/phone-zoom-consult-with-jason"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent-blue underline hover:opacity-80 transition"
+          >
+            book a direct 1-on-1 strategy call with Jason Hayes
+          </a>{" "}
+          to evaluate your specific situation.
+        </>
+      ),
     },
     {
       question: "How do I get my employees started?",
-      answer:
-        "Simply navigate to our Services section and select the 'Subcon Sales Training Certification Access' tier. Once registered, your employees will gain immediate access to the community, the video modules, the Wash Pitch Cheat Sheet, and the final exam.",
+      answer: (
+        <>
+          Simply navigate to{" "}
+          <a
+            href="https://car-wash-club.circle.so/checkout/employee-membership"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent-blue underline hover:opacity-80 transition"
+          >
+            this checkout link
+          </a>{" "}
+          to get your employees started. Once registered, your employees will
+          gain immediate access to the community, the video modules, the Wash
+          Pitch Cheat Sheet, and the final exam. <br />
+          <br />
+          <strong>Please Note:</strong> Make sure to enter the employee's email
+          when checking out for them, even if you are using your own payment
+          details. It is highly important that you enter your employee's email
+          because that email will be directly associated with the training, and
+          the instructions for how to access the training will be sent directly
+          to them via email!
+        </>
+      ),
     },
     {
       question:
