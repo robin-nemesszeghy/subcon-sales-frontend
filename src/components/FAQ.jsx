@@ -30,12 +30,12 @@ export default function FAQ() {
     {
       question: "How long does it take for employees to complete the training?",
       answer:
-        "The employee curriculum is broken down into 5 highly focused modules, followed by a final certification exam. It is designed to be self-paced and easy to digest. Most employees can comfortably complete the video training and action prompts within a few hours, though they retain full access to revisit the material and scripts whenever they need a refresher.",
+        "The employee curriculum is broken down into 5 highly focused modules, followed by a final certification exam. It is designed to be self-paced and easy to digest. Most employees can comfortably complete the video training and action prompts within a month, though they retain full access to revisit the material and scripts whenever they need a refresher.",
     },
     {
       question: "Do you offer 1-on-1 help for my specific car wash?",
       answer:
-        "Yes! We offer IBA & Tunnel Consulting sessions for $495 per session. You can book a direct 1-on-1 strategy call with Jason Hayes to run a site-specific operational audit, dial in your custom pricing strategy, and get immediate answers to your biggest bottlenecks.",
+        "Yes! We offer IBA & Tunnel Consulting. You can book a direct 1-on-1 strategy call with Jason Hayes to evaluate your specific situation.",
     },
     {
       question: "How do I get my employees started?",
@@ -64,7 +64,7 @@ export default function FAQ() {
           <div className="w-24 h-1.5 bg-accent-blue mx-auto rounded-full mb-6"></div>
           <p className="text-xl sm:text-2xl text-leather-medium">
             Everything you need to know about Subcon Sales, our methodology, and
-            how our training tiers work.
+            how our training and courses work.
           </p>
         </div>
 

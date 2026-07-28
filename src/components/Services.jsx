@@ -12,8 +12,7 @@ export default function Services() {
           </h2>
           {/* UPDATED: Increased text size from text-lg to text-xl sm:text-2xl */}
           <p className="mt-4 text-xl sm:text-2xl text-leather-medium">
-            Select the tier that best fits your position in the car wash
-            industry.
+            Select an option, or book a call for a consultation.
           </p>
         </div>
 
@@ -165,7 +164,7 @@ export default function Services() {
               <div className="text-4xl font-black text-accent-blue mb-1">
                 $150
                 <span className="text-lg text-leather-medium font-normal">
-                  /session
+                  /initial session
                 </span>
               </div>
             </div>

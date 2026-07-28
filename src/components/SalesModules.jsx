@@ -133,7 +133,7 @@ export default function SalesModules() {
           {/* UPDATED: Increased text size from text-lg to text-xl sm:text-2xl */}
           <p className="text-xl sm:text-2xl text-leather-medium">
             Explore the complete step-by-step framework taught inside the
-            community.
+            course.
           </p>
         </div>
 
