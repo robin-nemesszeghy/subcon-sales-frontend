@@ -16,6 +16,7 @@ This project is built with a modern, lightweight JavaScript stack prioritizing p
 - **Build Tool & Bundler:** Vite 8
 - **Styling:** Tailwind CSS 3.4
 - **Form Handling:** Formspree (Serverless POST endpoint)
+- **Animations:** Lottie-React (JSON vector rendering)
 - **Linting:** ESLint with React-specific rule sets
 
 ---
@@ -28,10 +29,10 @@ The application is structured as a modular SPA. The `App.jsx` entry point orches
 
 ```text
 src/
-├── assets/ # Static images and video assets
+├── assets/ # Static images, JSON animation data, and video assets
 ├── components/ # Modular UI components
 │ ├── Navbar.jsx # Sticky top navigation with mobile menu
-│ ├── Hero.jsx # Above-the-fold value proposition
+│ ├── Hero.jsx # Above-the-fold value proposition & Lottie integration
 │ ├── Services.jsx # Core membership tiers (Owner vs. Certification)
 │ ├── Provides.jsx # Value breakdown grid
 │ ├── Methods.jsx # Embedded video and methodology breakdown
@@ -66,9 +67,25 @@ The UI utilizes a custom theme configuration managed entirely within `tailwind.c
 - **Headings:** Merriweather (Serif)
 - **Body:** Plus Jakarta Sans (Sans-serif)
 
-**Custom Animations:**
+---
 
-- `drive`: A 14-second linear translation animation utilized in hero graphics to simulate vehicle movement through a wash tunnel.
+## 🎬 Complex Animation Handling (Lottie)
+
+To maximize performance and eliminate heavy video payload sizes, the `<Hero />` component utilizes JSON-based Lottie animations.
+
+### Data Extraction & Bundler Workarounds
+
+During development, extracting the raw multi-car JSON data from the legacy production DOM required executing a custom JavaScript targeting script via the Chrome DevTools Console, as the original assets were not exposed in a standard `bodymovin` array.
+
+Furthermore, a Vite bundler anomaly caused standard component imports of `lottie-react` to resolve as CommonJS module objects rather than functions. This is circumvented in `Hero.jsx` using a fallback assignment:
+`const Lottie = LottiePackage.default || LottiePackage;`
+
+### Dynamic Theming via CSS Filters
+
+Because the source JSON files contained embedded base64 PNG assets (rather than pure mathematical SVG vectors), dynamic `interactivity` props could not be used to recolor the graphics.
+
+To ensure brand cohesion without requiring access to the original Adobe After Effects source files, the "Before" graphic is dynamically recolored at runtime to match the `leather-medium` brand tone using a precise CSS photographic filter array:
+`style={{ filter: "sepia(100%) hue-rotate(340deg) saturate(60%) brightness(0.85)" }}`
 
 ---
 
@@ -80,7 +97,7 @@ To maintain a lightweight footprint without requiring a dedicated Node.js/Expres
 
 - **Implementation:** Standard HTML `<form>` utilizing a `POST` method.
 - **Endpoint:** The form targets a unique Formspree URL.
-- **Data Handling:** User inputs (`name`, `email`, `phone`, `message`) are mapped via standard `name` attributes and routed directly to the client's inbox (`subconsales@gmail.com`). Spam filtering and bot protection are handled natively on the Formspree backend, eliminating the need for client-side reCAPTCHA bloat.
+- **Data Handling:** User inputs (`name`, `email`, `phone`, `message`) are mapped via standard `name` attributes and routed directly to the client's inbox. Spam filtering and bot protection are handled natively on the Formspree backend, eliminating the need for client-side reCAPTCHA bloat.
 
 ---
 
@@ -91,7 +108,7 @@ To run this project locally, ensure you have [Node.js](https://nodejs.org/) inst
 **1. Clone the repository:**
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/subcon-sales-frontend.git
+git clone https://github.com/ClientOrgName/subcon-sales-frontend.git
 ```
 
 **2. Navigate into the project directory:**
