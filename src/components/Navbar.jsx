@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logoFull from "../assets/logo-full.png";
+import logoMain from "../assets/logo-main.png";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center bg-notebook-bg px-3 py-1.5 rounded-lg shadow-sm border border-leather-medium/20">
             <a href="#" onClick={closeMobileMenu}>
               <img
-                src={logoFull}
+                src={logoMain}
                 alt="Subcon Sales Logo"
                 className="h-10 md:h-12 w-auto object-contain"
               />

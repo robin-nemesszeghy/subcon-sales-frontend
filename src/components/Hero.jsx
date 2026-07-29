@@ -1,5 +1,9 @@
-import beforeCars from "../assets/before-cars.mp4";
-import afterCars from "../assets/after-cars.mp4";
+import LottiePackage from "lottie-react";
+import beforeCarsData from "../assets/before-cars.json";
+import afterCarsData from "../assets/after-cars.json";
+
+// This intercepts Vite's module object and extracts the actual React component
+const Lottie = LottiePackage.default || LottiePackage;
 
 export default function Hero() {
   // Custom click handler for smooth scrolling
@@ -23,21 +27,16 @@ export default function Hero() {
           <span className="text-base font-bold text-leather-medium uppercase tracking-widest mb-6 text-center">
             The Rest
           </span>
-          <video
-            src={beforeCars}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full max-w-[220px] object-contain mix-blend-multiply opacity-80 contrast-125 hue-rotate-[160deg] grayscale-[30%]"
-          />
+          <div className="w-full max-w-[220px]">
+            <Lottie animationData={beforeCarsData} loop={true} />
+          </div>
         </div>
 
         {/* CENTER COLUMN: Main Content */}
         <div className="text-center w-full lg:w-1/2 flex flex-col items-center">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-black text-leather-dark tracking-tight leading-tight mb-6">
-            {/* Added whitespace-nowrap to force it onto a single line */}
-            <span className="block text-accent-blue uppercase tracking-widest mb-4 whitespace-nowrap">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-black text-leather-dark tracking-tight leading-tight mb-6">
+            {/* Single line on desktop/tablet, clean wrap on mobile */}
+            <span className="block text-accent-blue uppercase tracking-wider mb-4 text-xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-normal break-words sm:whitespace-nowrap max-w-full">
               Car Wash Owners
             </span>
             Master the Psychology of <br className="hidden sm:inline" />
@@ -50,7 +49,7 @@ export default function Hero() {
             90% of decision making is subconscious. That’s what we target.
           </p>
 
-          {/* Action Button - Updated to smooth scroll */}
+          {/* Action Button */}
           <div className="flex justify-center w-full max-w-md mx-auto">
             <button
               onClick={handleServicesScroll}
@@ -69,14 +68,9 @@ export default function Hero() {
           <span className="text-base font-bold text-accent-blue uppercase tracking-widest mb-6 text-center">
             Subcon Sales
           </span>
-          <video
-            src={afterCars}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full max-w-[220px] object-contain mix-blend-multiply opacity-90 contrast-125 hue-rotate-[160deg]"
-          />
+          <div className="w-full max-w-[220px]">
+            <Lottie animationData={afterCarsData} loop={true} />
+          </div>
         </div>
       </div>
 
@@ -89,14 +83,9 @@ export default function Hero() {
           <span className="text-xs font-bold text-leather-medium uppercase tracking-widest mb-4 text-center">
             The Rest
           </span>
-          <video
-            src={beforeCars}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full object-contain mix-blend-multiply opacity-80 hue-rotate-[160deg] grayscale-[30%]"
-          />
+          <div className="w-full">
+            <Lottie animationData={beforeCarsData} loop={true} />
+          </div>
         </div>
 
         {/* Divider Line */}
@@ -109,14 +98,9 @@ export default function Hero() {
           <span className="text-xs font-bold text-accent-blue uppercase tracking-widest mb-4 text-center">
             Subcon Sales
           </span>
-          <video
-            src={afterCars}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full object-contain mix-blend-multiply opacity-90 hue-rotate-[160deg]"
-          />
+          <div className="w-full">
+            <Lottie animationData={afterCarsData} loop={true} />
+          </div>
         </div>
       </div>
     </section>
