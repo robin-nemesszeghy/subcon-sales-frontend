@@ -26,9 +26,9 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "What exactly is 'Subconscious Sales'?",
+      question: "What exactly is ‘Subconscious Sales’?",
       answer:
-        "Research shows that over 90% of human decision-making happens subconsciously. Our training leverages this reality. Instead of teaching pushy, traditional sales tactics, we train your team on how to communicate with the subconscious mind of the consumer. This reduces friction, normalizes the membership model, and makes the 'pitch' feel completely natural to both the employee and the customer.",
+        "Research shows that over 90% of human decision-making happens subconsciously. Our training leverages this reality. Instead of teaching pushy, traditional sales tactics, we train your team on how to communicate with the subconscious mind of the consumer. This reduces friction, normalizes the membership model, and makes the ‘pitch’ feel completely natural to both the employee and the customer.",
     },
     {
       question:
@@ -40,11 +40,15 @@ export default function FAQ() {
             onClick={handleServicesClick}
             className="text-accent-blue underline hover:opacity-80 transition cursor-pointer"
           >
-            The Owner Club
+            The IBA Owner Club
           </a>{" "}
-          ($250/month) is designed specifically for Owners and General Managers.
-          It focuses on high-level business philosophy, menu structure, pricing
-          strategy, and leadership accountability.{" "}
+          ($250/month) is designed specifically for Owners and General Managers
+          of IBAs (a club for Tunnel Owners is coming soon). It focuses on
+          high-level business philosophy, menu structure, pricing strategy, and
+          leadership accountability. (Note: To protect the privacy of the
+          members and ensure no local competitors are in the group, once you
+          join, Jason will manually review your application.) <br />
+          <br />
           <a
             href="#services"
             onClick={handleServicesClick}
@@ -52,16 +56,17 @@ export default function FAQ() {
           >
             The Certification Access
           </a>{" "}
-          ($19/month) is built for your staff—it provides your employees with
-          direct access to our step-by-step sales training modules, scripts, and
-          the final certification exam.
+          ($19/month) is built for your staff (whether you run IBA or Tunnel
+          washes). It provides your employees with direct access to our
+          step-by-step sales training modules, scripts, and the final
+          certification exam.
         </>
       ),
     },
     {
       question: "How long does it take for employees to complete the training?",
       answer:
-        "The employee curriculum is broken down into 5 highly focused modules, followed by a final certification exam. It is designed to be self-paced and easy to digest. Most employees can comfortably complete the video training and action prompts within a month, though they retain full access to revisit the material and scripts whenever they need a refresher.",
+        "The employee curriculum is broken down into 5 highly focused modules, followed by a final certification exam. It is designed to be self-paced and easy to digest. Most employees can comfortably complete the video training and action prompts within a few days, though they retain full access to revisit the material and scripts whenever they need a refresher.",
     },
     {
       question: "Do you offer 1-on-1 help for my specific car wash?",
@@ -97,9 +102,9 @@ export default function FAQ() {
           gain immediate access to the community, the video modules, the Wash
           Pitch Cheat Sheet, and the final exam. <br />
           <br />
-          <strong>Please Note:</strong> Make sure to enter the employee's email
+          <strong>Please Note:</strong> Make sure to enter the employee’s email
           when checking out for them, even if you are using your own payment
-          details. It is highly important that you enter your employee's email
+          details. It is highly important that you enter your employee’s email
           because that email will be directly associated with the training, and
           the instructions for how to access the training will be sent directly
           to them via email!
@@ -186,7 +191,7 @@ export default function FAQ() {
           </h4>
           {/* UPDATED: Increased text size by adding text-lg sm:text-xl */}
           <p className="text-lg sm:text-xl text-notebook-card/80 mb-8">
-            We're here to help you dial in your sales strategy.
+            We’re here to help you dial in your sales strategy.
           </p>
 
           <button

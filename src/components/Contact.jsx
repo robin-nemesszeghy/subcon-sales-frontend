@@ -10,7 +10,7 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-black text-leather-dark tracking-tight mb-4">
-            Let's Get Started!
+            Let’s Get Started!
           </h2>
           <div className="w-24 h-1.5 bg-accent-blue mx-auto rounded-full"></div>
         </div>
@@ -38,7 +38,7 @@ export default function Contact() {
           {/* Right Column: Contact Form */}
           <div className="w-full md:w-7/12 p-8 md:p-12">
             <p className="text-leather-dark text-lg mb-8 leading-relaxed font-medium">
-              Have a question, comment, or need assistance? We're excited to
+              Have a question, comment, or need assistance? We’re excited to
               hear from you and discuss how we can help with your project.
               Please use the form below, and we'll get back to you as soon as
               possible.

@@ -35,19 +35,19 @@ export default function Hero() {
 
         {/* CENTER COLUMN: Main Content */}
         <div className="text-center w-full lg:w-1/2 flex flex-col items-center">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-black text-leather-dark tracking-tight leading-none mb-6">
-            <span className="text-accent-blue">Car Wash Owners,</span> Master
-            the Psychology of <br className="hidden sm:inline" />
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-black text-leather-dark tracking-tight leading-tight mb-6">
+            {/* Added whitespace-nowrap to force it onto a single line */}
+            <span className="block text-accent-blue uppercase tracking-widest mb-4 whitespace-nowrap">
+              Car Wash Owners
+            </span>
+            Master the Psychology of <br className="hidden sm:inline" />
             <span className="underline decoration-accent-blue decoration-4 underline-offset-8">
               Subconscious Sales.
             </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-leather-medium max-w-xl mx-auto font-normal leading-relaxed mb-10">
-            True growth starts with understanding the people driving your
-            business. We give you the psychological frameworks to meet customers
-            and employees exactly where they are—and deliver exactly what they
-            want.
+            90% of decision making is subconscious. That’s what we target.
           </p>
 
           {/* Action Button - Updated to smooth scroll */}

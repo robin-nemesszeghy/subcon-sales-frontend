@@ -12,7 +12,7 @@ export default function Services() {
           </h2>
           {/* UPDATED: Increased text size from text-lg to text-xl sm:text-2xl */}
           <p className="mt-4 text-xl sm:text-2xl text-leather-medium">
-            Select an option, or book a call for a consultation.
+            Select an option, or book a consultation.
           </p>
         </div>
 
@@ -24,10 +24,11 @@ export default function Services() {
 
             <div className="text-center mb-8 pt-4">
               <h3 className="text-2xl font-serif font-bold text-leather-dark mb-2">
-                Owner Club
+                IBA Owner Club
               </h3>
               <p className="text-sm text-leather-medium italic mb-6">
-                Designed for Owners and General Managers
+                Designed for IBA Owners and General Managers (Tunnel coming
+                soon)
               </p>
               <div className="text-4xl font-black text-accent-blue mb-1">
                 $250
