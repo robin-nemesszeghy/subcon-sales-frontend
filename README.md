@@ -8,6 +8,15 @@ This repository houses the entire frontend architecture, designed for maximum re
 
 ---
 
+## 📚 Technical Documentation
+
+For detailed engineering specifications and deployment workflows, explore our Docs-as-Code guides:
+
+- 🏗 **[Component Architecture & Specs](./docs/component-architecture.md)** — Detailed state logic, props schemas, and dynamic Lottie filter handling.
+- ⚡ **[CI/CD & Deployment Pipeline](./docs/deployment-pipeline.md)** — Dual-remote Git architecture, Vite build verification, and edge distribution.
+
+---
+
 ## 🛠 Tech Stack & Dependencies
 
 This project is built with a modern, lightweight JavaScript stack prioritizing performance and developer experience:
