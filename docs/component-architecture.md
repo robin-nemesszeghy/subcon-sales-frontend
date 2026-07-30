@@ -61,7 +61,13 @@ const Lottie = LottiePackage.default || LottiePackage;
 Because the legacy "Before" graphic contained embedded base64 PNG data, standard Lottie vector color manipulation props could not be applied. The component applies a client-side CSS filter matrix to recolor the graphic to match the `leather-medium` theme color (`#6A4E3D`):
 
 ```jsx
-<Lottie "sepia(100%) animationData="{beforeCarsData}" brightness(0.85)" filter: hue-rotate(340deg) loop="{true}" saturate(60%) style="{{" }}/>
+<Lottie
+  animationData={beforeCarsData}
+  loop={true}
+  style={{
+    filter: "sepia(100%) hue-rotate(340deg) saturate(60%) brightness(0.85)",
+  }}
+/>
 ```
 
 ---

@@ -25,7 +25,7 @@ To inspect or configure these remotes locally:
 git remote -v
 
 # Add the client remote target
-git remote add client [https://github.com/CLIENT-ORG/subcon-sales-frontend.git](https://github.com/CLIENT-ORG/subcon-sales-frontend.git)
+git remote add client https://github.com/CLIENT-ORG/subcon-sales-frontend.git
 
 # Dual-push deployment execution
 git push origin main
